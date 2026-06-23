@@ -2,11 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-<<<<<<< HEAD
-    branches: 'main' # atau 'master' sesuai nama branch utama Anda
-=======
     branches: 'main'
->>>>>>> 0fead2f439c3ded9c6b0d8fb88ab4bdf653522a8
 
 permissions:
   contents: read
@@ -46,8 +42,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-<<<<<<< HEAD
         uses: actions/deploy-pages@v4
-=======
-        uses: actions/deploy-pages@v4
->>>>>>> 0fead2f439c3ded9c6b0d8fb88ab4bdf653522a8
