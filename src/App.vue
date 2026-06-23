@@ -274,7 +274,7 @@ const produkList = ref([
     description:
       "Aplikasi Laundry dirancang untuk membantu operasional laundry dalam pencatatan transaksi, pengelolaan pelanggan, pencetakan nota, dan pembuatan laporan secara cepat dan terstruktur.",
     price: "Rp 1.500.000",
-    image: "/src/assets/laundry.png",
+    image: "./laundry.png",
     link: "#",
     techStack: "Laravel v11, TailwindCss",
     database: "MySQL",
@@ -293,7 +293,7 @@ const produkList = ref([
     description:
       "Aplikasi Dashboard dan Landing page yang respoonsif , Landing page dapat di atur dari dashboard dan Dashboard memiliki fitur data member dan uang kas (iuran anggota).",
     price: "Rp 1.500.000",
-    image: "/src/assets/app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
+    image: "./app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
     link: "#",
     techStack: "Laravel v11, Bootstrap CoreUI",
     database: "MySQL / MariaDB",
