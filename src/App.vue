@@ -13,10 +13,14 @@
         </div>
 
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#hero" class="hover:text-indigo-600 dark:hover:text-yellow-400 transition">Beranda</a>
-          <a href="#skills" class="hover:text-indigo-600 dark:hover:text-yellow-400 transition">Keahlian</a>
-          <a href="#portfolio" class="hover:text-indigo-600 dark:hover:text-yellow-400 transition">Portofolio</a>
-          <a href="#experience" class="hover:text-indigo-600 dark:hover:text-yellow-400 transition">Pengalaman</a>
+          <a href="#hero"
+            class="relative hover:text-indigo-600 dark:hover:text-yellow-400 transition duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full pb-1">Beranda</a>
+          <a href="#skills"
+            class="relative hover:text-indigo-600 dark:hover:text-yellow-400 transition duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full pb-1">Keahlian</a>
+          <a href="#portfolio"
+            class="relative hover:text-indigo-600 dark:hover:text-yellow-400 transition duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full pb-1">Portofolio</a>
+          <a href="#experience"
+            class="relative hover:text-indigo-600 dark:hover:text-yellow-400 transition duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full pb-1">Pengalaman</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-4">
@@ -128,7 +132,8 @@
         </div>
       </section>
 
-      <section id="portfolio" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="portfolio" class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div class="text-center max-w-3xl mx-auto mb-12">
           <h2
             class="text-2xl tracking-tight font-bold bg-gradient-to-r from-emerald-500 to-gray-300 bg-clip-text text-transparent">
@@ -139,9 +144,11 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="flex flex-wrap justify-center gap-6 w-full mx-auto">
+
           <div v-for="(produk, index) in produkList" :key="index"
-            class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 flex flex-col">
+            class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300 flex flex-col w-full sm:w-[calc(50%-12px)] md:w-[calc(33.33%-16px)] max-w-[350px]">
+
             <div
               class="relative h-44 w-full bg-gray-100 dark:bg-gray-700 overflow-hidden border-b border-gray-100 dark:border-gray-700">
               <img :src="produk.image" :alt="produk.title"
@@ -174,7 +181,9 @@
                 </button>
               </div>
             </div>
+
           </div>
+
         </div>
 
         <div class="mt-12 text-center">
@@ -186,6 +195,7 @@
             </svg>
           </a>
         </div>
+
       </section>
 
       <section id="experience" class="py-16 bg-white dark:bg-gray-800/50 border-t border-gray-200 dark:border-gray-700">
@@ -268,6 +278,7 @@ const deskripsiHero = ref(
 
 // 4. Data Produk Statis (Tanpa Database)
 const produkList = ref([
+  // Data 1
   {
     title: "Aplikasi Management Laundry",
     category: "Web Application",
@@ -275,7 +286,7 @@ const produkList = ref([
       "Aplikasi Laundry dirancang untuk membantu operasional laundry dalam pencatatan transaksi, pengelolaan pelanggan, pencetakan nota, dan pembuatan laporan secara cepat dan terstruktur.",
     price: "Rp 1.500.000",
     image: "./laundry.png",
-    link: "#",
+    link: "https://gematech.freedev.app/",
     techStack: "Laravel v11, TailwindCss",
     database: "MySQL",
     features: [
@@ -287,6 +298,25 @@ const produkList = ref([
       { title: "Backup Database", desc: " Backup & Restore Database." }
     ]
   },
+  // Data 2
+  {
+    title: "Aplikasi Management Komunitas Badminton",
+    category: "Web Aplication & Landing Page",
+    description:
+      "Aplikasi Dashboard dan Landing page yang respoonsif , Landing page dapat di atur dari dashboard dan Dashboard memiliki fitur data member dan uang kas (iuran anggota).",
+    price: "Rp 1.500.000",
+    image: "./app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
+    link: "https://digitaramedan.com",
+    techStack: "Laravel v11, Bootstrap CoreUI",
+    database: "MySQL / MariaDB",
+    features: [
+      { title: "Point of Sales (Kasir)", desc: "Pencatatan order pelanggan kiloan/satuan cepat kurang dari 10 detik." },
+      { title: "Manajemen Status Status", desc: "Tracking cucian (Antrian, Proses, Selesai, Diambil)." },
+      { title: "Invoice Printer", desc: "Cetak nota otomatis untuk printer thermal bluetooth/kasir." },
+      { title: "Laporan Keuangan", desc: "Kalkulasi omset harian dan bulanan secara instan." }
+    ]
+  },
+  // Data 3
   {
     title: "Aplikasi Management Komunitas Badminton",
     category: "Web Aplication & Landing Page",
@@ -305,12 +335,12 @@ const produkList = ref([
     ]
   },
   {
-    title: "E-Commerce Toko Online",
-    category: "Web Application",
+    title: "Aplikasi Management Komunitas Badminton",
+    category: "Web Aplication & Landing Page",
     description:
-      "Sistem toko online siap pakai dengan fitur keranjang belanja terintegrasi WhatsApp checkout dan payment gateway.",
-    price: "Rp 2.000.000",
-    image: "/src/assets/ecommerce-app.jpg",
+      "Aplikasi Dashboard dan Landing page yang respoonsif , Landing page dapat di atur dari dashboard dan Dashboard memiliki fitur data member dan uang kas (iuran anggota).",
+    price: "Rp 1.500.000",
+    image: "./app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
     link: "#",
     techStack: "Laravel v11, Bootstrap CoreUI",
     database: "MySQL / MariaDB",

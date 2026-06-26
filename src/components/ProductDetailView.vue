@@ -54,6 +54,13 @@
                             Order via WhatsApp
                         </a>
                     </div>
+                    <div class="pt-2">
+                        <a :href="activeProduct.link" target="_blank"
+                            class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition shadow-md shadow-emerald-500/20 text-center cursor-pointer">
+
+                            link Demo
+                        </a>
+                    </div>
                 </div>
             </section>
 
