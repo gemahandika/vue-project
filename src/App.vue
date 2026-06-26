@@ -316,41 +316,6 @@ const produkList = ref([
       { title: "Laporan Keuangan", desc: "Kalkulasi omset harian dan bulanan secara instan." }
     ]
   },
-  // Data 3
-  {
-    title: "Aplikasi Management Komunitas Badminton",
-    category: "Web Aplication & Landing Page",
-    description:
-      "Aplikasi Dashboard dan Landing page yang respoonsif , Landing page dapat di atur dari dashboard dan Dashboard memiliki fitur data member dan uang kas (iuran anggota).",
-    price: "Rp 1.500.000",
-    image: "./app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
-    link: "#",
-    techStack: "Laravel v11, Bootstrap CoreUI",
-    database: "MySQL / MariaDB",
-    features: [
-      { title: "Point of Sales (Kasir)", desc: "Pencatatan order pelanggan kiloan/satuan cepat kurang dari 10 detik." },
-      { title: "Manajemen Status Status", desc: "Tracking cucian (Antrian, Proses, Selesai, Diambil)." },
-      { title: "Invoice Printer", desc: "Cetak nota otomatis untuk printer thermal bluetooth/kasir." },
-      { title: "Laporan Keuangan", desc: "Kalkulasi omset harian dan bulanan secara instan." }
-    ]
-  },
-  {
-    title: "Aplikasi Management Komunitas Badminton",
-    category: "Web Aplication & Landing Page",
-    description:
-      "Aplikasi Dashboard dan Landing page yang respoonsif , Landing page dapat di atur dari dashboard dan Dashboard memiliki fitur data member dan uang kas (iuran anggota).",
-    price: "Rp 1.500.000",
-    image: "./app-bulutangkis.jpeg", // <-- Sesuaikan nama file gambar Anda di folder assets
-    link: "#",
-    techStack: "Laravel v11, Bootstrap CoreUI",
-    database: "MySQL / MariaDB",
-    features: [
-      { title: "Point of Sales (Kasir)", desc: "Pencatatan order pelanggan kiloan/satuan cepat kurang dari 10 detik." },
-      { title: "Manajemen Status Status", desc: "Tracking cucian (Antrian, Proses, Selesai, Diambil)." },
-      { title: "Invoice Printer", desc: "Cetak nota otomatis untuk printer thermal bluetooth/kasir." },
-      { title: "Laporan Keuangan", desc: "Kalkulasi omset harian dan bulanan secara instan." }
-    ]
-  },
 
 ]);
 
